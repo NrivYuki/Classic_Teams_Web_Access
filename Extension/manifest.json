@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Classic_Teams_Web_Access",
+  "version": "1.0",
+  "description": "Web版のTeams Classicに対する操作制限を解除します。",
+  "permissions": ["activeTab", "scripting"],
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://teams.microsoft.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
